@@ -12,8 +12,9 @@ channel.queue_declare(queue="hello")
 # exchange specified by empty string ("") is special exchange.it allows us to specify exactly to which queue the message should go.
 
 
-channel.basic_publish(exchange="", routing_key="hello", body="hello queue")
+message = "".join(sys.argv[1:]) or "hello world"
+channel.basic_publish(exchange="", routing_key="hello", body=message)
 
-print("hello queue sent hello queue msg")
+print(f"hello queue sent message : {message}")
 
 connection.close()
