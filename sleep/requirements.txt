@@ -1,0 +1,6 @@
+Flask==2.2.2
+celery==5.2.7
+amqp==2.6.0
+importlib-metadata==4.13.0
+redis==5.0.8 
+flower==2.0.1
